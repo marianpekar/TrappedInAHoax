@@ -7,8 +7,9 @@ public class PlayerController : MonoBehaviour
 {
     [SerializeField]
     private GameObject selectedPlayer = null;
-    
-    private NavMeshAgent agent; 
+
+    private NavMeshAgent agent;
+    private PickupController pickupController;
 
     void Start()
     {
@@ -18,19 +19,28 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetMouseButtonDown(1))
+            pickupController.ReleaseObject();
+
         if (!Input.GetMouseButtonDown(0)) return;
 
         if (!Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out var hit, 1000)) return;
 
-        if (hit.collider.gameObject.CompareTag("Player"))
-            SelectPlayer(hit.collider.gameObject);
+        var gameObject = hit.collider.gameObject;
+
+        if (gameObject.CompareTag("Player"))
+            SelectPlayer(gameObject);
         else
             SetTarget(hit.point);
+
+        if (gameObject.CompareTag("Pickable"))
+            pickupController.PickObject(gameObject);
     }
 
     void SetComponents(GameObject player)
     {
         agent = player.GetComponent<NavMeshAgent>();
+        pickupController = player.GetComponent<PickupController>();
     }
 
     void SelectPlayer(GameObject player)
