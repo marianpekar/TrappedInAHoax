@@ -3,16 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class PlayerMovementManager : MonoBehaviour
+public class PlayerController : MonoBehaviour
 {
     [SerializeField]
-    private GameObject selectedPlayer;
+    private GameObject selectedPlayer = null;
     
     private NavMeshAgent agent; 
 
     void Start()
     {
-        SetComponents(selectedPlayer);
+        SelectPlayer(selectedPlayer);
     }
 
     // Update is called once per frame
@@ -36,6 +36,7 @@ public class PlayerMovementManager : MonoBehaviour
     void SelectPlayer(GameObject player)
     {
         SetComponents(player);
+        PlayerEvents.Instance.OnPlayerSelected?.Invoke(player.transform);
     }
 
     void SetTarget(Vector3 target)
