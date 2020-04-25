@@ -5,18 +5,10 @@ using UnityEngine;
 
 public class ArrowController : MonoBehaviour
 {
-    [SerializeField] 
     private float rotationSpeed = 3f;
-
-    [SerializeField]
     private float bobAmount = 0.1f;
-
-    [SerializeField]
     private float bobSpeed = 4f;
-
-    [SerializeField]
     private Vector3 offset = new Vector3(0f, 4f, 0);
-
 
     private Transform playerTransform;
 

@@ -16,11 +16,12 @@ public class PlayerController : MonoBehaviour
         SelectPlayer(selectedPlayer);
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (Input.GetMouseButtonDown(1))
-            pickupController.ReleaseObject();
+            pickupController.ThrowObject();
+        else if (Input.GetMouseButtonDown(2))
+            pickupController.DropObject();
 
         if (!Input.GetMouseButtonDown(0)) return;
 
