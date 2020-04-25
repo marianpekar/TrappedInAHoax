@@ -6,18 +6,30 @@ using UnityEngine.AI;
 public class PlayerController : MonoBehaviour
 {
     [SerializeField]
+    private GameObject[] players;
+
     private GameObject selectedPlayer = null;
+    private int currentPlayerIndex = 0;
 
     private NavMeshAgent agent;
     private PickupController pickupController;
 
     void Start()
     {
-        SelectPlayer(selectedPlayer);
+        SelectPlayer(players[currentPlayerIndex]);
     }
 
     void Update()
     {
+        if (Input.GetKeyUp(KeyCode.Space))
+        {
+            currentPlayerIndex++;
+            if (currentPlayerIndex >= players.Length)
+                currentPlayerIndex = 0;
+
+            SelectPlayer(players[currentPlayerIndex]);
+        }
+
         if (Input.GetMouseButtonDown(1))
             pickupController.ThrowObject();
         else if (Input.GetMouseButtonDown(2))
@@ -46,6 +58,7 @@ public class PlayerController : MonoBehaviour
 
     void SelectPlayer(GameObject player)
     {
+        selectedPlayer = player;
         SetComponents(player);
         PlayerEvents<Transform>.Instance.OnPlayerSelected?.Invoke(player.transform);
         PlayerEvents<GameObject>.Instance.OnPlayerSelected?.Invoke(player);
