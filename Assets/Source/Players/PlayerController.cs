@@ -47,7 +47,8 @@ public class PlayerController : MonoBehaviour
     void SelectPlayer(GameObject player)
     {
         SetComponents(player);
-        PlayerEvents.Instance.OnPlayerSelected?.Invoke(player.transform);
+        PlayerEvents<Transform>.Instance.OnPlayerSelected?.Invoke(player.transform);
+        PlayerEvents<GameObject>.Instance.OnPlayerSelected?.Invoke(player);
     }
 
     void SetTarget(Vector3 target)
