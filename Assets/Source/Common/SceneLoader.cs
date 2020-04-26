@@ -22,6 +22,11 @@ public class SceneLoader : MonoBehaviour
         SceneManager.LoadScene(currentSceneIndex);
     }
 
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
+
     public void Update()
     {
         if (Input.GetKeyDown(KeyCode.R))
