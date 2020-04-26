@@ -151,7 +151,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 157995798}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -189,7 +189,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'SWITCH PLAYER
+  m_Text: 'SWITCH PLAYER*
 
     RESTART LEVEL'
 --- !u!222 &7493148
@@ -369,6 +369,7 @@ RectTransform:
   - {fileID: 659974333}
   - {fileID: 1711552873}
   - {fileID: 975231296}
+  - {fileID: 951788594}
   - {fileID: 1255087801}
   - {fileID: 7493146}
   - {fileID: 1425112251}
@@ -415,8 +416,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -157.6, y: 44.6}
-  m_SizeDelta: {x: 132.99731, y: 39.000458}
+  m_AnchoredPosition: {x: -157.6, y: 34.92}
+  m_SizeDelta: {x: 132.99731, y: 58.36606}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &659974334
 MonoBehaviour:
@@ -449,7 +450,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'MOVE TO POSITION
+  m_Text: '[ LMB ]
+
+    MOVE TO POSITION
 
     PICK UP OBJECT
 
@@ -718,6 +721,83 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &951788593
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 951788594}
+  - component: {fileID: 951788596}
+  - component: {fileID: 951788595}
+  m_Layer: 5
+  m_Name: GoalInstruction
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &951788594
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 951788593}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 157995798}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -153.7, y: -53.7}
+  m_SizeDelta: {x: 227.2445, y: 23.792824}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &951788595
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 951788593}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.8207547, g: 0.8207547, b: 0.8207547, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: b34e97020c51b8a45ba74fb83b12dc24, type: 3}
+    m_FontSize: 12
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 0
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: GET BOTH PLAYERS TO GREY FLOOR AREA
+--- !u!222 &951788596
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 951788593}
+  m_CullTransparentMesh: 0
 --- !u!1 &975231295
 GameObject:
   m_ObjectHideFlags: 0
@@ -753,8 +833,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -66.173, y: 10.099801}
-  m_SizeDelta: {x: 58.34575, y: 30}
+  m_AnchoredPosition: {x: -66.173, y: 0.055882}
+  m_SizeDelta: {x: 58.34575, y: 50.087837}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &975231297
 MonoBehaviour:
@@ -787,7 +867,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'DROP
+  m_Text: '[ RMB ]
+
+    DROP
 
     OBJECT'
 --- !u!222 &975231298
@@ -963,7 +1045,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 157995798}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1044,7 +1126,7 @@ RectTransform:
   m_Children:
   - {fileID: 1148714140}
   m_Father: {fileID: 157995798}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
@@ -1253,8 +1335,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -134.6, y: -4.206999}
-  m_SizeDelta: {x: 58.288788, y: 30}
+  m_AnchoredPosition: {x: -134.6, y: -10.9}
+  m_SizeDelta: {x: 58.288788, y: 35.77603}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1711552874
 MonoBehaviour:
@@ -1287,7 +1369,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'THROW
+  m_Text: '[ MMB ]
+
+    THROW
 
     OBJECT'
 --- !u!222 &1711552875
@@ -1385,8 +1469,8 @@ MonoBehaviour:
     the latest theory they stumbled upon. \n\nThey both agreed it's something big.
     Bigger than dissecion of an alien family in Area 51, bigger than all theories
     about Dallas 1963, bigger than 'that attack was an inside job' theory.\n\nAnd
-    the last thing they both remember was a big bright light and then just dark void.
-    They woke up trapped in this strange maze. Who's behind all of this? "
+    the last thing they both remember was a big bright light and then came just dark
+    void. They woke up trapped in this strange maze. Who's behind all of this? "
 --- !u!222 &2061284603
 CanvasRenderer:
   m_ObjectHideFlags: 0
