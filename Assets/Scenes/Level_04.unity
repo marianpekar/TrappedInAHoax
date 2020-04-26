@@ -500,7 +500,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetPosition: {x: -21, y: 8.45, z: 8}
   speed: 1
-  bobAmount: 0.001
+  bobAmount: 0.002
   bobSpeed: 4
 --- !u!208 &669745080
 NavMeshObstacle:
@@ -1123,7 +1123,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetPosition: {x: -14, y: 8.45, z: 2}
   speed: 1
-  bobAmount: 0.001
+  bobAmount: 0.002
   bobSpeed: 4
 --- !u!208 &1097638914
 NavMeshObstacle:
@@ -1568,7 +1568,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetPosition: {x: -7.5, y: 8.45, z: 8}
   speed: 1
-  bobAmount: 0.001
+  bobAmount: 0.002
   bobSpeed: 4
 --- !u!1 &1743638639
 GameObject:

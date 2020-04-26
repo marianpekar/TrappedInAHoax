@@ -869,7 +869,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetPosition: {x: -4.5, y: 8.45, z: 0}
   speed: 1
-  bobAmount: 0.001
+  bobAmount: 0.002
   bobSpeed: 4
 --- !u!1 &1824657439
 GameObject:
