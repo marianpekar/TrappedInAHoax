@@ -10,11 +10,10 @@ public class Button : MonoBehaviour
     public UnityEvent OnButtonReleased;
 
     // Update is called once per frame
-    void OnTriggerEnter(Collider otheCollider)
+    void OnTriggerStay(Collider otheCollider)
     {
         if (otheCollider.gameObject.CompareTag("Pickable") || otheCollider.gameObject.CompareTag("Player"))
         {
-            Debug.Log("Button pressed");
             OnButtonPressed.Invoke();
         }
     }
@@ -23,7 +22,6 @@ public class Button : MonoBehaviour
     {
         if (otheCollider.gameObject.CompareTag("Pickable") || otheCollider.gameObject.CompareTag("Player"))
         {
-            Debug.Log("Button released");
             OnButtonReleased.Invoke();
         }
     }

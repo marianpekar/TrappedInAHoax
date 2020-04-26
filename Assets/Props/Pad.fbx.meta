@@ -7,8 +7,18 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: Button
+    second: {fileID: 2100000, guid: 40a7924fe3c47554196fb0436f7e24c3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: Material
     second: {fileID: 2100000, guid: 21b7244c5e0533f438874594f41e314e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Outline
+    second: {fileID: 2100000, guid: fcd7e96a7d483694ba8d201d73248db7, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
