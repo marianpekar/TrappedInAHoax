@@ -9,6 +9,11 @@ public class SceneLoader : MonoBehaviour
 
     void Awake()
     {
+        var instance = FindObjectOfType<SceneLoader>();
+
+        if(instance != this)
+            Destroy(instance.gameObject);
+
         DontDestroyOnLoad(gameObject);
     }
 
@@ -30,6 +35,13 @@ public class SceneLoader : MonoBehaviour
     public void Update()
     {
         if (Input.GetKeyDown(KeyCode.R))
+        {
             SceneManager.LoadScene(currentSceneIndex);
+        }
+        else if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            currentSceneIndex = 0;
+            SceneManager.LoadScene(currentSceneIndex);
+        }
     }
 }

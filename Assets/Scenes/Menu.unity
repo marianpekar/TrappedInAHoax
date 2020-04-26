@@ -155,8 +155,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -91.54993, y: -89.907}
-  m_SizeDelta: {x: 109.099884, y: 23.792824}
+  m_AnchoredPosition: {x: -91.54993, y: -80}
+  m_SizeDelta: {x: 109.099884, y: 39.242348}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &7493147
 MonoBehaviour:
@@ -191,7 +191,9 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: 'SWITCH PLAYER*
 
-    RESTART LEVEL'
+    RESTART LEVEL
+
+    BACK TO MENU'
 --- !u!222 &7493148
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -234,7 +236,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -137, y: -14.419998}
+  m_AnchoredPosition: {x: -137, y: -2.8199873}
   m_SizeDelta: {x: 200, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &10672992
@@ -417,7 +419,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -157.6, y: 34.92}
+  m_AnchoredPosition: {x: -157.6, y: 46.520008}
   m_SizeDelta: {x: 132.99731, y: 58.36606}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &659974334
@@ -756,7 +758,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -153.7, y: -53.7}
+  m_AnchoredPosition: {x: -153.7, y: -42.09999}
   m_SizeDelta: {x: 227.2445, y: 23.792824}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &951788595
@@ -834,7 +836,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -66.173, y: 0.055882}
+  m_AnchoredPosition: {x: -66.173, y: 11.655893}
   m_SizeDelta: {x: 58.34575, y: 50.087837}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &975231297
@@ -1050,8 +1052,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -191.1, y: -89.907}
-  m_SizeDelta: {x: 81.00555, y: 23.792824}
+  m_AnchoredPosition: {x: -191.1, y: -79.99798}
+  m_SizeDelta: {x: 81.00555, y: 39.24587}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1255087802
 MonoBehaviour:
@@ -1086,7 +1088,9 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: '[ SPACE ]
 
-    [ R ]'
+    [ R ]
+
+    [ ESC ]'
 --- !u!222 &1255087803
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1131,7 +1135,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -0.000015259, y: 63.4}
+  m_AnchoredPosition: {x: -0.000015259, y: 70}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1425112252
@@ -1260,7 +1264,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -0.000015259, y: 31.7}
+  m_AnchoredPosition: {x: -0.000015259, y: 42}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1657622769
@@ -1387,7 +1391,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -0.000038146973, y: -81.9}
+  m_AnchoredPosition: {x: -0.000038146973, y: -70.29999}
   m_SizeDelta: {x: 800, y: 109.43843}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1689447242
@@ -1465,7 +1469,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -134.6, y: -10.9}
+  m_AnchoredPosition: {x: -134.6, y: 0.70001125}
   m_SizeDelta: {x: 58.288788, y: 35.77603}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1711552874
@@ -1638,7 +1642,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 120.6, y: -8.706999}
+  m_AnchoredPosition: {x: 120.6, y: 2.893012}
   m_SizeDelta: {x: 241.19641, y: 211.42517}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2061284602
@@ -1674,7 +1678,7 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: "Jane and Joe, proud members of local conspiracy club were debating about
     the latest theory they stumbled upon. \n\nThey both agreed it's something big.
-    Bigger than dissecion of an alien family in Area 51, bigger than all theories
+    Bigger than dissection of an alien family in Area 51, bigger than all theories
     about Dallas 1963, bigger than 'that attack was an inside job' theory.\n\nAnd
     the last thing they both remember was a big bright light and then came just dark
     void. They woke up trapped in this strange maze. Who's behind all of this? "
