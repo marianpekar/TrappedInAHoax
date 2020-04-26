@@ -10,6 +10,12 @@ public class MovableWall : MonoBehaviour
     [SerializeField]
     private float speed;
 
+    [SerializeField]
+    private float bobAmount = 0.001f;
+
+    [SerializeField]
+    private float bobSpeed = 4f;
+
     private Vector3 defaultPosition;
     private bool isMovingToTargetPosition;
 
@@ -30,6 +36,10 @@ public class MovableWall : MonoBehaviour
         {
             transform.position = Vector3.Lerp(transform.position, defaultPosition, Time.deltaTime * speed);
         }
+
+        transform.position = new Vector3(transform.position.x, 
+                                       transform.position.y + Mathf.Sin(Time.time * bobSpeed) * bobAmount,
+                                         transform.position.z);
     }
 
     public void MoveToTargetPosition()
