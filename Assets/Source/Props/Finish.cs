@@ -34,7 +34,7 @@ public class Finish : MonoBehaviour
 
     void OnTriggerExit(Collider otheCollider)
     {
-        if (otheCollider.gameObject.CompareTag("Pickable") || otheCollider.gameObject.CompareTag("Player"))
+        if (otheCollider.gameObject.CompareTag("Player"))
         {
             players--;
 
