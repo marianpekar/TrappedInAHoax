@@ -5,10 +5,8 @@ using UnityEngine.Events;
 
 public class Finish : MonoBehaviour
 {
-    public UnityEvent OnFinish;
-
     private int players;
-    private int playersToFinish;
+    private int playersToFinish = 2;
 
     // Update is called once per frame
     void OnTriggerEnter(Collider otheCollider)
@@ -19,7 +17,7 @@ public class Finish : MonoBehaviour
             Debug.Log($"{players} on finish line");
 
             if (players >= playersToFinish)
-                OnFinish.Invoke();
+                FindObjectOfType<SceneLoader>().LoadNext();
         }
     }
 
