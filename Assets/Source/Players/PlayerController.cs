@@ -8,7 +8,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private GameObject[] players;
 
-    private GameObject selectedPlayer = null;
+    private GameObject selectedPlayer;
     private int currentPlayerIndex = 0;
 
     private NavMeshAgent agent;
@@ -30,10 +30,16 @@ public class PlayerController : MonoBehaviour
             SelectPlayer(players[currentPlayerIndex]);
         }
 
-        if (Input.GetMouseButtonDown(1))
+        if (Input.GetMouseButtonDown(2))
+        {
             pickupController.ThrowObject();
-        else if (Input.GetMouseButtonDown(2))
+            SetTarget(selectedPlayer.transform.position);
+        }
+        else if (Input.GetMouseButtonDown(1))
+        {
             pickupController.DropObject();
+            SetTarget(selectedPlayer.transform.position);
+        }
 
         if (!Input.GetMouseButtonDown(0)) return;
 

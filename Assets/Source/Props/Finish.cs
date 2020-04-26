@@ -7,6 +7,9 @@ public class Finish : MonoBehaviour
 {
     private int players;
     private int playersToFinish = 2;
+    private float delayBeforeLoadNextScene = 2f;
+
+    public UnityEvent OnFinish;
 
     // Update is called once per frame
     void OnTriggerEnter(Collider otheCollider)
@@ -17,8 +20,16 @@ public class Finish : MonoBehaviour
             Debug.Log($"{players} on finish line");
 
             if (players >= playersToFinish)
-                FindObjectOfType<SceneLoader>().LoadNext();
+            {
+                OnFinish.Invoke();
+                Invoke("LoadNextScene", delayBeforeLoadNextScene);
+            }
         }
+    }
+
+    void LoadNextScene()
+    {
+        FindObjectOfType<SceneLoader>().LoadNext();
     }
 
     void OnTriggerExit(Collider otheCollider)
