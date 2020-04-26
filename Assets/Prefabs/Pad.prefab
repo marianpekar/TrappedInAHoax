@@ -136,6 +136,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  pressedMaterial: {fileID: 2100000, guid: 4ddd9af9108d4c549b27e981d344870c, type: 2}
+  releasedMaterial: {fileID: 2100000, guid: 40a7924fe3c47554196fb0436f7e24c3, type: 2}
 --- !u!65 &8988735971859707093
 BoxCollider:
   m_ObjectHideFlags: 0
