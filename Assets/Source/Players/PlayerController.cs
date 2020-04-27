@@ -14,15 +14,18 @@ public class PlayerController : MonoBehaviour
 
     private NavMeshAgent agent;
     private PickupController pickupController;
+    private VoiceController voiceController;
 
     void Start()
     {
-        SelectPlayer(selectedPlayer);
+        SetComponents(selectedPlayer);
+        PlayerEvents<Transform>.Instance.OnPlayerSelected?.Invoke(selectedPlayer.transform);
+        PlayerEvents<GameObject>.Instance.OnPlayerSelected?.Invoke(selectedPlayer);
     }
 
     void Update()
     {
-        if (Input.GetKeyUp(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             currentPlayerIndex++;
             if (currentPlayerIndex >= players.Length)
@@ -61,12 +64,16 @@ public class PlayerController : MonoBehaviour
     {
         agent = player.GetComponent<NavMeshAgent>();
         pickupController = player.GetComponent<PickupController>();
+        voiceController = player.GetComponent<VoiceController>();
     }
 
     void SelectPlayer(GameObject player)
     {
         selectedPlayer = player;
         SetComponents(player);
+
+        voiceController.PlayNextCatchPhrase();
+
         PlayerEvents<Transform>.Instance.OnPlayerSelected?.Invoke(player.transform);
         PlayerEvents<GameObject>.Instance.OnPlayerSelected?.Invoke(player);
     }
