@@ -14,6 +14,7 @@ public class PlayerController : MonoBehaviour
 
     private NavMeshAgent agent;
     private PickupController pickupController;
+    private FootstepsController footstepsController;
 
     void Start()
     {
@@ -61,6 +62,7 @@ public class PlayerController : MonoBehaviour
     {
         agent = player.GetComponent<NavMeshAgent>();
         pickupController = player.GetComponent<PickupController>();
+        footstepsController = player.GetComponent<FootstepsController>();
     }
 
     void SelectPlayer(GameObject player)
@@ -74,5 +76,6 @@ public class PlayerController : MonoBehaviour
     void SetTarget(Vector3 target)
     {
         agent.destination = target;
+        footstepsController.Play();
     }
 }
