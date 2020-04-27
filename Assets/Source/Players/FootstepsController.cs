@@ -10,7 +10,7 @@ public class FootstepsController : MonoBehaviour
 
     private NavMeshAgent agent;
 
-    private float footstepsVolume = 0.5f;
+    private float footstepsVolume = 0.6f;
 
     void Start()
     {
