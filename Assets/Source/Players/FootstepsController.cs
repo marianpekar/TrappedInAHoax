@@ -10,6 +10,8 @@ public class FootstepsController : MonoBehaviour
 
     private NavMeshAgent agent;
 
+    private float footstepsVolume = 0.5f;
+
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
@@ -17,17 +19,9 @@ public class FootstepsController : MonoBehaviour
 
     void FixedUpdate()
     {
-        if(agent.remainingDistance <= 0.1)
-            Stop();
-    }
-
-    public void Play()
-    {
-        audioSource.Play();
-    }
-
-    public void Stop()
-    {
-        audioSource.Stop();
+        if (agent.remainingDistance <= 0.1)
+            audioSource.volume = 0;
+        else
+            audioSource.volume = footstepsVolume;
     }
 }

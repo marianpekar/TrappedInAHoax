@@ -17,26 +17,40 @@ public class Button : MonoBehaviour
 
     private Renderer renderer;
 
+    [SerializeField] 
+    private AudioSource buttonPressed;
+
+    [SerializeField]
+    private AudioSource buttonReleased;
+
     void Start()
     {
         renderer = GetComponent<Renderer>();
     }
 
-    // Update is called once per frame
-    void OnTriggerStay(Collider otheCollider)
+    void OnTriggerEnter(Collider otherCollider)
     {
-        if (otheCollider.gameObject.CompareTag("Pickable") || otheCollider.gameObject.CompareTag("Player"))
+        if (otherCollider.gameObject.CompareTag("Pickable") || otherCollider.gameObject.CompareTag("Player"))
         {
-            SetMaterial(pressedMaterial);
+            buttonPressed.Play();
+        }
+    } 
+
+    void OnTriggerStay(Collider otherCollider)
+    {
+        if (otherCollider.gameObject.CompareTag("Pickable") || otherCollider.gameObject.CompareTag("Player"))
+        {
             OnButtonPressed.Invoke();
+            SetMaterial(pressedMaterial);
         }
     }
 
-    void OnTriggerExit(Collider otheCollider)
+    void OnTriggerExit(Collider otherCollider)
     {
-        if (otheCollider.gameObject.CompareTag("Pickable") || otheCollider.gameObject.CompareTag("Player"))
+        if (otherCollider.gameObject.CompareTag("Pickable") || otherCollider.gameObject.CompareTag("Player"))
         {
             SetMaterial(releasedMaterial);
+            buttonReleased.Play();
             OnButtonReleased.Invoke();
         }
     }
