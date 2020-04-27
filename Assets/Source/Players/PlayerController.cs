@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private GameObject[] players;
 
+    [SerializeField]
     private GameObject selectedPlayer;
     private int currentPlayerIndex = 0;
 
@@ -16,7 +17,7 @@ public class PlayerController : MonoBehaviour
 
     void Start()
     {
-        SelectPlayer(players[currentPlayerIndex]);
+        SelectPlayer(selectedPlayer);
     }
 
     void Update()
