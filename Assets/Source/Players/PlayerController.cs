@@ -34,12 +34,12 @@ public class PlayerController : MonoBehaviour
             SelectPlayer(players[currentPlayerIndex]);
         }
 
-        if (Input.GetMouseButtonDown(2))
+        if (Input.GetMouseButtonDown(2) || Input.GetKeyDown(KeyCode.T))
         {
             pickupController.ThrowObject();
             SetTarget(selectedPlayer.transform.position);
         }
-        else if (Input.GetMouseButtonDown(1))
+        else if (Input.GetMouseButtonDown(1) || Input.GetKeyDown(KeyCode.D))
         {
             pickupController.DropObject();
             SetTarget(selectedPlayer.transform.position);
