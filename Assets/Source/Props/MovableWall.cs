@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class MovableWall : MonoBehaviour
 {
-    [SerializeField]
     private Vector3 targetPosition;
 
     [SerializeField]
@@ -23,6 +22,7 @@ public class MovableWall : MonoBehaviour
     void Start()
     {
         defaultPosition = transform.position;
+        targetPosition = new Vector3(defaultPosition.x, defaultPosition.y + 5f, defaultPosition.z);
     }
 
     // Update is called once per frame
